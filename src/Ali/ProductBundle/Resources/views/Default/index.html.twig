@@ -1,1 +1,11 @@
-Hello {{ name }}!
+{% extends '::base.html.twig' %}
+
+{% block title 'YAY...' %}
+
+{% block body %}
+    {# ... the rest of the template ... #}
+    {% for product in products %}
+         <strong>{{ product.name }}</strong> ID: {{ product.id }}  <a href="{{ path('product_view', {id: product.id}) }}">Link</a> </br>
+    {% endfor %}
+
+{% endblock %}

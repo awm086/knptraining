@@ -2,3 +2,4 @@
 home:
     path:     /hello/{name}
     defaults: { _controller: MainBundle:Hello:index }
+

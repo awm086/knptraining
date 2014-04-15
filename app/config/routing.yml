@@ -1,6 +1,5 @@
 product:
-    resource: "@ProductBundle/Controller/"
-    type:     annotation
+    resource: "@ProductBundle/Resources/config/routing.yml"
     prefix:   /
 
 ali_hello:

@@ -1,0 +1,13 @@
+# src/Ali/MainBundle/Resources/config/routing.yml
+product_new:
+    path:     /product/new
+    defaults: { _controller: ProductBundle:Default:new }
+
+product_list:
+    path:     /products
+    defaults: { _controller: ProductBundle:Default:list }
+
+product_view:
+    path:     /product/{id}
+    defaults: { _controller: ProductBundle:Default:view }
+
