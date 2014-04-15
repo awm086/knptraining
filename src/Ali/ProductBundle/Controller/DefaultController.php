@@ -3,6 +3,7 @@
 namespace Ali\ProductBundle\Controller;
 
 
+use Ali\ProductBundle\Form\ProductType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
@@ -17,18 +18,8 @@ class DefaultController extends Controller
         $product = new Product();
         $product->setname('Product');
 
-        $form = $this->createFormBuilder($product,
-            array(
-                'attr' => array('novalidate' => 'novalidate'),
-                'data_class' => 'Ali\ProductBundle\Entity\Product'
-            ))
-          ->add('name', 'text')
-          ->add('description', 'textarea')
-          ->add('price', 'number')
-          ->add('submit_button', 'submit')
-          ->getForm()
-        ;
-
+        $type = new ProductType();
+        $form = $this->createForm($type, $product);
         $form->handleRequest($request);
 
         if ($form->isValid()) {
@@ -50,6 +41,7 @@ class DefaultController extends Controller
             )
         );
     }
+
 
     public function listAction(Request $request)
     {

@@ -1,3 +1,10 @@
 {# src/Acme/TaskBundle/Resources/views/Default/new.html.twig #}
-
-{{ form(form) }}
+{{ form_start(form) }}
+ {{ dump(form) }}
+    {{ form_errors(form) }}
+    {{ form_row(form.name) }}
+    {{ form_row(form.description) }}
+    {{ form_row(form.price) }}
+    {{ form_row(form.submit_button) }}
+    {{ form_rest(form) }}
+{{ form_end(form) }}
