@@ -1,0 +1,14 @@
+{% block form_row %}
+    {% spaceless %}
+        {% if errors|length > 0 %}
+            <div class="errors">
+         {% else %}
+             <div>
+        {% endif %}
+
+            {{ form_label(form) }}
+            {{ form_errors(form) }}
+            {{ form_widget(form) }}
+        </div>
+    {% endspaceless %}
+{% endblock form_row %}

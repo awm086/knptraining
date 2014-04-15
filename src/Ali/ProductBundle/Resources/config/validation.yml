@@ -1,0 +1,5 @@
+Ali\ProductBundle\Entity\Product:
+    properties:
+        name:
+            - NotBlank: ~
+            - NotNull: ~
