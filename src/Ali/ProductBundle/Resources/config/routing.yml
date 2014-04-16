@@ -11,3 +11,7 @@ product_view:
     path:     /product/{id}
     defaults: { _controller: ProductBundle:Default:view }
 
+product_json:
+    path:     /products.json
+    defaults: { _controller: ProductBundle:Default:listjson }
+

@@ -1,0 +1,12 @@
+services:
+    my_product_serializer:
+        class: Ali\ProductBundle\Service\ProductSerializer
+        arguments: [@router]
+    my_event_listner:
+        class: Ali\ProductBundle\EventListener\LanguageListener
+        arguments: [@logger]
+        tags:
+            -
+                name: kernel.event_listener
+                event: kernel.request
+                method: onKernelRequest

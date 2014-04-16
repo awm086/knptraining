@@ -1,6 +1,7 @@
 {# src/Acme/TaskBundle/Resources/views/Default/new.html.twig #}
 {{ form_start(form) }}
- {{ dump(form) }}
+ {# dump(form) #}
+{{ form.name.vars.help }}
     {{ form_errors(form) }}
     {{ form_row(form.name) }}
     {{ form_row(form.description) }}

@@ -12,5 +12,6 @@
 <body>
 {% block body %}{% endblock %}
 {% block javascripts %}{% endblock %}
+{{ render_hinclude(controller('MainBundle:Hello:_latestTweets')) }}
 </body>
 </html>

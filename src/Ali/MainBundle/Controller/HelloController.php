@@ -22,4 +22,12 @@ class HelloController extends Controller
             'MainBundle:Hello:index.html.twig',
             array('name' => $name));
     }
+
+    public function _latestTweetsAction()
+    {
+        $res = new Response('latest tweetssss');
+        $res->setSharedMaxAge(20);
+
+        return $res;
+    }
 }

@@ -4,7 +4,7 @@ imports:
     - { resource: security.yml }
 
 framework:
-    #esi:             ~
+    esi:             ~
     #translator:      { fallback: "%locale%" }
     secret:          "%secret%"
     router:
@@ -27,6 +27,8 @@ framework:
 
 # Twig Configuration
 twig:
+    globals:
+        fooo: bar
     debug:            "%kernel.debug%"
     strict_variables: "%kernel.debug%"
     form:
